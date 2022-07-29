@@ -17,15 +17,12 @@ public class TesteFuncionario {
         boolean autenticou = carlos.autenticaSenha(240);
         System.out.println(autenticou);
 
-        System.out.println("O salario de Carlos é de : "+ carlos.getSalario());
-        System.out.println("salario de : "+ carlos.getSalario()+ " e ganhou uma bonificação de "+ carlos.getBonificacao());
+        System.out.println("O salario de Carlos é de : " + carlos.getSalario());
+        System.out.println("salario de : " + carlos.getSalario() + " e ganhou uma bonificação de " + carlos.getBonificacao());
 
         double totalSalarioMaisBonificacao = carlos.getSalario() + carlos.getBonificacao();
 
-        System.out.println("O salario de carlos com a bonificação foi para : "+ totalSalarioMaisBonificacao);
-
-
-
+        System.out.println("O salario de carlos com a bonificação foi para : " + totalSalarioMaisBonificacao);
 
 
     }
