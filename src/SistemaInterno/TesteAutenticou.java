@@ -1,4 +1,4 @@
-package Funcionarios;
+package SistemaInterno;
 
 public class TesteAutenticou {
     public static void main(String[] args) {

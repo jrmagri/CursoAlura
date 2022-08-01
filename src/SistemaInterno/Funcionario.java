@@ -1,4 +1,4 @@
-package Funcionarios;
+package SistemaInterno;
 //não pode criar objetos dessa classe porque é abstract
 public abstract class Funcionario {
 

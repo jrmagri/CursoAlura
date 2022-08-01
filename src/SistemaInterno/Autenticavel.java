@@ -1,4 +1,4 @@
-package Funcionarios;
+package SistemaInterno;
 //dentro de uma interface não pode ter nada concreto
 //contrato autenticavel
     //quem assina essa interface, precisa implementar

@@ -1,4 +1,4 @@
-package Funcionarios;
+package SistemaInterno;
 
 public class Gerente extends Funcionario implements Autenticavel {
 

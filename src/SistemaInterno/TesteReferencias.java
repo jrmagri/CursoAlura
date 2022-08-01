@@ -1,4 +1,4 @@
-package Funcionarios;
+package SistemaInterno;
 
 public class TesteReferencias {
 
