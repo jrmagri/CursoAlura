@@ -4,8 +4,8 @@ public class SistemaInterno {
 
     private int senha = 2222;
 
-    public void autentica(FuncionarioAutenticavel fa){
-        boolean autenticou = fa.autenticaSenha(senha);
+    public void autentica(Autenticavel fa){
+        boolean autenticou = fa.autentica(senha);
         if(autenticou){
             System.out.println("Pode entrar no sistema");
         }else{

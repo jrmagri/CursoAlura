@@ -14,7 +14,7 @@ public class TesteFuncionario {
         carlos.setSalario(5000.00);
         carlos.setSenha(2540);
 
-        boolean autenticou = carlos.autenticaSenha(240);
+        boolean autenticou = carlos.autentica(240);
         System.out.println(autenticou);
 
         System.out.println("O salario de Carlos é de : " + carlos.getSalario());
