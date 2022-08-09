@@ -8,7 +8,7 @@ public abstract class Conta {
     private Cliente titular;
     private static int totalContasCriadas;
 
-    public Conta(String Agencia, String Numero){
+    public Conta(String Agencia, String Numero) {
         Conta.totalContasCriadas++;
         //System.out.println("O total de contas criadas é : "+ totalContasCriadas);
         this.agencia = Agencia;
@@ -18,52 +18,43 @@ public abstract class Conta {
 
     public abstract void Depositar(double valor);
 
-    public boolean Sacar(double valor) {
+    public void Sacar(double valor) {
 
-        if(this.saldo >= valor) {
-
-            this.saldo -= valor;
-            return true;
-        } else {
-
-            System.out.println("SALDO INSUFICIENTE");
-            return false;
+        if (this.saldo < valor) {
+            throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
 
         }
-    }
 
-    public boolean Transferir(double valor, Conta destino) {
-
-        if(this.saldo >= valor) {
-            this.saldo -= valor;
-            destino.Depositar(valor);
-            return true;
-        }
-
-        return false;
+        this.saldo -= valor;
 
     }
 
-    public String getAgencia(){
+    public void Transferir(double valor, Conta destino) {
+        this.Sacar(valor);
+        destino.Depositar(valor);
+
+    }
+
+    public String getAgencia() {
         return this.agencia;
     }
 
     //como foi criado construtor definindo parametros obrigatorios de agencia e numero, não precisa do setter.
-    public void setAgencia(String Agencia){
+    public void setAgencia(String Agencia) {
         this.agencia = Agencia;
     }
 
 
-    public String getNumero(){
+    public String getNumero() {
         return this.numero;
     }
 
     //como foi criado construtor definindo parametros obrigatorios de agencia e numero, não precisa do setter.
-    public void  setNumero(String Numero){
+    public void setNumero(String Numero) {
         this.numero = Numero;
     }
 
-    public double getSaldo(){
+    public double getSaldo() {
         return this.saldo;
     }
 
